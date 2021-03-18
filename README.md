@@ -7,6 +7,9 @@ CIS215: Intro to Java programming class work
 - String Manipulator
 ### Ch 3
 - Software Sales
+### Ch 4
+- While loop
+- Algorithm workbench while loops
 
 ## Classwork
 - Basic Selection
