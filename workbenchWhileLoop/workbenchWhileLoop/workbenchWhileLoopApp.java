@@ -5,10 +5,10 @@
  * 
  * I really wanted to do all 4 problems in the same file so I'm going to use methods to split them up.
  * 
- * 7.  Convert the while loop to a do-while loop.     -Located in method loop7();
- * 8.  Convert the do-while loop to a while loop.     -Located in method loop8();  * Having errors with this one...
- * 9.  Convert the while loop to a for loop.          -Located in method loop9();
- * 10. Convert the for loop to a while loop.          -Located in method loop10();
+ * 7.  Convert the while loop to a do-while loop.     -Located in method loop7()
+ * 8.  Convert the do-while loop to a while loop.     -Located in method loop8()  * Having errors with this one...
+ * 9.  Convert the while loop to a for loop.          -Located in method loop9()
+ * 10. Convert the for loop to a while loop.          -Located in method loop10()
  * 
  */
 
@@ -111,8 +111,8 @@ public class workbenchWhileLoopApp
 		
 		System.out.println("Problem #7:");
 		loop7();
-		//System.out.println("Problem #8:");
-		//loop8();
+		System.out.println("Problem #8:");
+		loop8();
 		System.out.println("Problem #9:");
 		loop9();
 		System.out.println("Problem #10:");
