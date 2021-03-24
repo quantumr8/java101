@@ -10,6 +10,7 @@ CIS215: Intro to Java programming class work
 ### Ch 4
 - While loop
 - Algorithm workbench while loops
+- Sum of numbers
 
 ## Classwork
 - Basic Selection
