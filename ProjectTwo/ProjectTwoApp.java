@@ -34,7 +34,8 @@ public class ProjectTwoApp
 		{
 			// Reset & define variables
 			
-			int menu=0,num1=0,num2=0,ans=0,calc=0,tries=3;
+			int menu=0,num1=0,num2=0,calc=0,tries=3;
+			double calcDbl=0,ans=0;
 			
 			
 			// User input
@@ -101,7 +102,7 @@ public class ProjectTwoApp
 					notValid=true;
 				}
 				else
-					notValid=false; // Valids
+					notValid=false; // Valid
 					
 			}
 			}while(notValid); // Validation loop
@@ -121,7 +122,7 @@ public class ProjectTwoApp
 					calc = num1 * num2;
 					break;
 				case 4:
-					calc = num1 / num2;
+					calcDbl = num1 / num2;
 					break;
 			}
 			
@@ -129,17 +130,20 @@ public class ProjectTwoApp
 			// User answer
 			
 			ansMsg = num1+" "+functionSign+" "+num2+" = __";
-			incorrectMsg = String.format("You answered incorrectly 3 times.%nThe correct answer is: %d", calc);
 			triesMsg = String.format("You answered incorrectly. Try again. %d tries left.", tries);
+			if(menu==4) // Different format for division answer in double
+				incorrectMsg = String.format("You answered incorrectly 3 times.%nThe correct answer is: %.2f", calcDbl);
+			else
+				incorrectMsg = String.format("You answered incorrectly 3 times.%nThe correct answer is: %d", calc);
 			
 			
 			// Compare
 			
 			while(tries>0)
 			{
-				ans = Integer.parseInt(JOptionPane.showInputDialog(null, ansMsg, functionName, JOptionPane.QUESTION_MESSAGE));
+				ans = Double.parseDouble(JOptionPane.showInputDialog(null, ansMsg, functionName, JOptionPane.QUESTION_MESSAGE));
 				
-				if (ans == calc)
+				if (ans == calc || ans == calcDbl)
 					{
 					JOptionPane.showMessageDialog(null, "You answered correctly!", functionName, JOptionPane.INFORMATION_MESSAGE);
 					correct++;
