@@ -177,7 +177,7 @@ public class ProjectTwoApp
 		FileWriter fwriter1 = new FileWriter("scores.txt",true);
 		PrintWriter f=new PrintWriter(fwriter1);
 		
-		f.println(correct+" - "+incorrect);
+		f.println("correct: "+correct+" Incorrect: "+incorrect);
 		
 		f.close();
 		
