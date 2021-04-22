@@ -21,3 +21,4 @@ CIS215: Intro to Java programming class work
 ## Projects & Classwork
 - Basic selection
 - Project 2
+- Final Project
