@@ -15,41 +15,41 @@ public class Student
 	}
 		
 	// Input form main class
-	Student(String first, String last, double s, double m)
+	public void SetData(String first, String last, double s) // Void function
 	{
 		nameF = first;
 		nameL = last;
 		score = s;
-		maxScore= m;
 	}
 	
 	// Methods
 	
-	public double GetPercent()
+	public void SetMax(double m) // Takes a parameter
+	{
+		maxScore = m;
+	}
+	
+	public double GetPercent() // Value returning
 	{
 		// Calculate student percentage
 		percent = (score/maxScore)*100;
 		
 		return percent;
-		
-		// Output student percentage to user [DISABLED]
-		// JOptionPane.showMessageDialog(null, percent, "Exam Scores", JOptionPane.INFORMATION_MESSAGE);
-		
 	}
 	
-	public String GetGrade()
+	public char GetGrade()
 	{
-		String grade;
-		if(percent==100)
-			grade="A+";
-		else if(percent<100 && percent>=90)
-			grade="B";
-		else if(percent<90 && percent>=80)
-			grade="C";
-		else if(percent<80 && percent>=70)
-			grade="D";
+		char grade;
+		if(percent>=90)
+			grade='A';
+		else if(percent>=80)
+			grade='B';
+		else if(percent>=70)
+			grade='C';
+		else if(percent>=60)
+			grade='D';
 		else
-			grade="F";
+			grade='F';
 		
 		return grade;
 		
@@ -60,6 +60,10 @@ public class Student
 		return nameF;
 	}
 	
-	
-	//end
+	public String GetLastName()
+	{
+		return nameL;
+	}
+
+	// End of Student class
 }
